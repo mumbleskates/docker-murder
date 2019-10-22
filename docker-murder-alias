@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias docker-murder="docker kill \$(docker ps -q) && docker rmi -f \$(docker images -a -q) && docker volume rm -f \$(docker volume ls -f dangling=true -q)"
